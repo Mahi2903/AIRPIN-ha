@@ -1,0 +1,152 @@
+import type { Location, AlertItem, HourlyData } from "./types"
+
+export const DELHI_CENTER: [number, number] = [28.6139, 77.209]
+
+export const mockLocations: Location[] = [
+  {
+    id: "1",
+    label: "Home",
+    lat: 28.6328,
+    lng: 77.2197,
+    aqi: 180,
+    temp: 28,
+    humidity: 65,
+    prediction: 220,
+    category: "Poor",
+  },
+  {
+    id: "2",
+    label: "Office",
+    lat: 28.6129,
+    lng: 77.2295,
+    aqi: 95,
+    temp: 30,
+    humidity: 58,
+    prediction: 110,
+    category: "Moderate",
+  },
+  {
+    id: "3",
+    label: "Gym",
+    lat: 28.5921,
+    lng: 77.2108,
+    aqi: 42,
+    temp: 27,
+    humidity: 70,
+    prediction: 55,
+    category: "Good",
+  },
+  {
+    id: "4",
+    label: "Connaught Place",
+    lat: 28.6315,
+    lng: 77.2167,
+    aqi: 210,
+    temp: 31,
+    humidity: 52,
+    prediction: 245,
+    category: "Unhealthy",
+  },
+  {
+    id: "5",
+    label: "India Gate",
+    lat: 28.6129,
+    lng: 77.2295,
+    aqi: 155,
+    temp: 29,
+    humidity: 60,
+    prediction: 175,
+    category: "Poor",
+  },
+]
+
+export const mockAlerts: AlertItem[] = [
+  {
+    id: "a1",
+    type: "danger",
+    message: "Home AQI >150 - Mask up!",
+    tip: "Asthma tip: Stay indoors and use air purifier",
+    time: "2 min ago",
+  },
+  {
+    id: "a2",
+    type: "success",
+    message: "Gym area air quality is Good (AQI 42)",
+    tip: "Safe for outdoor exercise",
+    time: "15 min ago",
+  },
+  {
+    id: "a3",
+    type: "warning",
+    message: "AQI spike detected at Connaught Place (+35% in 1hr)",
+    tip: "Avoid outdoor activities in this area",
+    time: "28 min ago",
+  },
+  {
+    id: "a4",
+    type: "info",
+    message: "Safe route to Gym: Via green zone through Lodhi Garden",
+    time: "45 min ago",
+  },
+  {
+    id: "a5",
+    type: "warning",
+    message: "Tomorrow's prediction: Very Poor (220) at Home",
+    tip: "Plan indoor activities, keep windows closed",
+    time: "1 hr ago",
+  },
+  {
+    id: "a6",
+    type: "danger",
+    message: "Humidity + AQI combo alert at India Gate",
+    tip: "High humidity worsens PM2.5 impact. Avoid area.",
+    time: "1.5 hr ago",
+  },
+]
+
+export const mockHourlyData: HourlyData[] = [
+  { hour: "6AM", aqi: 120, temp: 22, humidity: 75 },
+  { hour: "7AM", aqi: 135, temp: 23, humidity: 72 },
+  { hour: "8AM", aqi: 160, temp: 25, humidity: 68 },
+  { hour: "9AM", aqi: 175, temp: 27, humidity: 64 },
+  { hour: "10AM", aqi: 185, temp: 28, humidity: 62 },
+  { hour: "11AM", aqi: 195, temp: 30, humidity: 58 },
+  { hour: "12PM", aqi: 210, temp: 31, humidity: 55 },
+  { hour: "1PM", aqi: 220, temp: 32, humidity: 52 },
+  { hour: "2PM", aqi: 205, temp: 32, humidity: 50 },
+  { hour: "3PM", aqi: 190, temp: 31, humidity: 52 },
+  { hour: "4PM", aqi: 180, temp: 30, humidity: 55 },
+  { hour: "5PM", aqi: 170, temp: 28, humidity: 60 },
+  { hour: "6PM", aqi: 165, temp: 27, humidity: 63 },
+  { hour: "7PM", aqi: 155, temp: 26, humidity: 66 },
+  { hour: "8PM", aqi: 145, temp: 25, humidity: 68 },
+  { hour: "9PM", aqi: 140, temp: 24, humidity: 70 },
+  { hour: "10PM", aqi: 135, temp: 23, humidity: 72 },
+  { hour: "11PM", aqi: 130, temp: 22, humidity: 74 },
+]
+
+export const heatmapPoints = [
+  { lat: 28.6350, lng: 77.2250, intensity: 0.9 },
+  { lat: 28.6200, lng: 77.2100, intensity: 0.4 },
+  { lat: 28.5950, lng: 77.2150, intensity: 0.2 },
+  { lat: 28.6315, lng: 77.2167, intensity: 0.85 },
+  { lat: 28.6100, lng: 77.2300, intensity: 0.6 },
+  { lat: 28.6400, lng: 77.2050, intensity: 0.7 },
+  { lat: 28.6050, lng: 77.2000, intensity: 0.3 },
+  { lat: 28.6250, lng: 77.2400, intensity: 0.5 },
+  { lat: 28.6450, lng: 77.2300, intensity: 0.8 },
+  { lat: 28.5900, lng: 77.2250, intensity: 0.15 },
+  { lat: 28.6180, lng: 77.1950, intensity: 0.45 },
+  { lat: 28.6500, lng: 77.2150, intensity: 0.75 },
+]
+
+export const neighborhoods = [
+  "Connaught Place",
+  "Karol Bagh",
+  "Lajpat Nagar",
+  "Dwarka",
+  "Rohini",
+  "Saket",
+  "Hauz Khas",
+  "Janakpuri",
+]
